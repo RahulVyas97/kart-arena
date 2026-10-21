@@ -1,0 +1,9 @@
+{
+ "version": 1,
+ "mode": "live",
+ "created": "2026-10-21T23:13:55.268074+00:00",
+ "base_currency": "GBP",
+ "capital_per_market": 10000,
+ "accounts": {},
+ "ai_usage": {}
+}
