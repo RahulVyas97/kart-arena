@@ -1,0 +1,167 @@
+# Kart Arena config
+# Paper money only. Nothing in this project can place a real trade.
+
+[arena]
+base_currency = "GBP"        # currency for the leaderboard
+capital_per_market = 10000   # fake starting money per market, per contestant (in base currency)
+interval_minutes = 15        # how often contestants decide; also the price-bar size (1, 2, 5, 15, 30 or 60)
+runs_dir = "runs"            # where state, logs and reports go (runs/live, runs/sim, runs/replay)
+
+[risk]
+# Hard limits enforced in code. The AI cannot see or change these at runtime.
+max_position_pct = 20              # max % of an account in any one stock
+max_open_positions = 5
+max_trades_per_day = 12            # per contestant, per market
+daily_loss_limit_pct = 3           # down this much today -> no new buys in that market until tomorrow
+max_drawdown_pct = 15              # down this much from peak -> sell everything, account stops
+no_new_buys_before_close_min = 15  # no fresh buys this close to the bell
+flatten_before_close_min = 0       # 0 = may hold overnight; e.g. 10 = sell everything 10 min before close
+
+# Your "take the profit out, reinvest the original capital" idea, built in:
+target_return_pct = 10   # when an account is up this much...
+on_target = "bank"       # "bank" = sell all, set the profit aside, restart with the original capital
+                         # "stop" = sell all and stop trading that market; "ignore" = do nothing
+# The AI is never told the target. Telling an agent to "hit X%" pushes it to take more risk.
+
+# ---------------------------------------------------------------------------
+# Markets. The arena follows the sun: each market trades only while it's open.
+# Hours and holidays come from exchange calendars; the open/close times below
+# are a fallback if a calendar is missing or out of date.
+# Costs are approximate. Check your own broker.
+# Watchlists are just examples, not recommendations. Use Yahoo Finance tickers.
+# ---------------------------------------------------------------------------
+
+[[markets]]
+key = "IN"
+name = "India (NSE)"
+calendar = "XBOM"            # NSE and BSE share hours and holidays
+timezone = "Asia/Kolkata"
+open = "09:15"
+close = "15:30"
+currency = "INR"
+price_divisor = 1
+commission_bps = 3           # 1 bps = 0.01%
+buy_tax_bps = 10             # STT on delivery buys (0.1%)
+sell_tax_bps = 10            # STT on delivery sells (0.1%)
+slippage_bps = 5
+symbols = ["RELIANCE.NS", "TCS.NS", "INFY.NS", "HDFCBANK.NS", "ICICIBANK.NS"]
+enabled = true
+
+[[markets]]
+key = "UK"
+name = "UK (LSE)"
+calendar = "XLON"
+timezone = "Europe/London"
+open = "08:00"
+close = "16:30"
+currency = "GBP"
+price_divisor = 100          # Yahoo quotes most LSE shares in pence
+commission_bps = 0
+buy_tax_bps = 50             # stamp duty on UK share purchases (0.5%)
+sell_tax_bps = 0
+slippage_bps = 5
+symbols = ["AZN.L", "SHEL.L", "HSBA.L", "ULVR.L", "BP.L"]
+enabled = true
+
+[[markets]]
+key = "US"
+name = "US (NYSE/Nasdaq)"
+calendar = "XNYS"
+timezone = "America/New_York"
+open = "09:30"
+close = "16:00"
+currency = "USD"
+price_divisor = 1
+commission_bps = 0
+buy_tax_bps = 0
+sell_tax_bps = 0
+slippage_bps = 3
+symbols = ["AAPL", "MSFT", "NVDA", "AMZN", "GOOGL"]
+enabled = true
+
+# Optional: switch these on to shrink the overnight gap after New York closes.
+[[markets]]
+key = "AU"
+name = "Australia (ASX)"
+calendar = "XASX"
+timezone = "Australia/Sydney"
+open = "10:00"
+close = "16:00"
+currency = "AUD"
+price_divisor = 1
+commission_bps = 5
+buy_tax_bps = 0
+sell_tax_bps = 0
+slippage_bps = 5
+symbols = ["BHP.AX", "CBA.AX", "CSL.AX", "NAB.AX", "WBC.AX"]
+enabled = false
+
+[[markets]]
+key = "JP"
+name = "Japan (Tokyo)"
+calendar = "XTKS"
+timezone = "Asia/Tokyo"
+open = "09:00"
+close = "15:30"
+currency = "JPY"
+price_divisor = 1
+commission_bps = 5
+buy_tax_bps = 0
+sell_tax_bps = 0
+slippage_bps = 5
+symbols = ["7203.T", "6758.T", "9984.T", "8306.T", "6861.T"]
+enabled = false
+
+# ---------------------------------------------------------------------------
+# Contestants. Every contestant gets its own paper accounts, the same prices,
+# the same costs and the same risk limits (the benchmark skips risk limits).
+# Add more AI contestants with different models to run your own mini arena.
+# ---------------------------------------------------------------------------
+
+[[contestants]]
+name = "Claude"
+brain = "ai"
+# Where Claude's answers come from:
+#   "auto"        = API key if .env has one, otherwise your Claude subscription (below)
+#   "api"         = API key in .env only (pay as you go)
+#   "claude-code" = your Claude Pro/Max/Team plan through the Claude Code app. No API key.
+#                   Install Claude Code, run `claude` once and sign in. Uses your plan's usage limits.
+backend = "auto"
+model = "claude-haiku-5-5"
+effort = "low"               # low / medium / high: more thinking = more cost or usage
+max_tokens = 3000            # API only
+news_per_symbol = 2          # public Yahoo Finance headlines per stock in live mode (0 = off)
+usd_per_mtok_in = 0.10       # API only, used to estimate spend; check current pricing
+usd_per_mtok_out = 0.50
+
+[[contestants]]
+name = "Local AI"
+brain = "ai"
+backend = "ollama"           # free and offline: install Ollama (ollama.com), then run: ollama pull qwen2.5:7b
+model = "qwen2.5:7b"         # any Ollama model works, e.g. llama3.1:8b
+host = "http://localhost:11434"
+news_per_symbol = 2
+
+[[contestants]]
+name = "Trend Rules"
+brain = "rules"
+fast = 8                     # fast moving average (bars)
+slow = 21                    # slow moving average (bars)
+rsi_max = 70                 # don't buy when RSI is above this
+stop_loss_pct = 2.0
+take_profit_pct = 4.0
+position_pct = 15            # % of equity per buy
+
+[[contestants]]
+name = "Buy & Hold"
+brain = "hold"               # benchmark: buys the watchlist once and never sells
+
+# Rough value of 1 unit of each currency in USD. Only used when live FX rates
+# aren't available (sim mode, or Yahoo FX is down).
+[fx_fallback_usd]
+USD = 1.0
+GBP = 1.33
+INR = 0.0115
+AUD = 0.65
+JPY = 0.0067
+EUR = 1.15

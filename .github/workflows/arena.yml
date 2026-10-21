@@ -1,0 +1,82 @@
+# Runs Kart Arena online for free on GitHub, and publishes the phone page.
+# Paper money only. See README: "Run it online and open it on your phone".
+
+name: Kart Arena
+
+on:
+  schedule:
+    # Every 15 minutes on weekdays, 03:00-21:59 UTC: India opens 03:45 UTC, New York closes 20:00/21:00 UTC.
+    # Odd minutes on purpose: GitHub is busiest on the hour, and scheduled runs can start a few minutes late.
+    - cron: "7,22,37,52 3-21 * * 1-5"
+  workflow_dispatch: {}   # adds a "Run workflow" button for a manual run
+
+permissions:
+  contents: write   # save the arena's state back to this repo
+  pages: write      # publish the phone page
+  id-token: write
+
+concurrency:
+  group: kart-arena
+  cancel-in-progress: false
+
+jobs:
+  race:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      TZ: Europe/London   # times shown on your page; change it when you move (e.g. Asia/Kolkata)
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install Kart Arena
+        run: pip install -r requirements.txt
+
+      - name: Install Claude Code (only when using your Claude plan instead of an API key)
+        if: env.CLAUDE_CODE_OAUTH_TOKEN != '' && env.ANTHROPIC_API_KEY == ''
+        run: |
+          curl -fsSL https://claude.ai/install.sh | bash
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Race one round (only does something while a market is open)
+        run: python -m kart run --once
+
+      - name: Save results to the repo
+        id: save
+        run: |
+          git config user.name "kart-arena-bot"
+          git config user.email "kart-arena-bot@users.noreply.github.com"
+          git add -f runs/live
+          if git diff --cached --quiet; then
+            echo "Nothing new (no market open)."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git commit -m "Arena update $(date -u +'%Y-%m-%d %H:%M') UTC"
+          git pull --rebase --autostash
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Build the phone page
+        if: steps.save.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        run: python -m kart report --web site
+
+      - name: Upload the page
+        if: steps.save.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: site
+
+      - name: Publish the page
+        id: deployment
+        if: steps.save.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        uses: actions/deploy-pages@v5

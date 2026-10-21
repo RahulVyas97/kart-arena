@@ -1,0 +1,6 @@
+yfinance>=1.7
+exchange_calendars>=4.13
+pandas>=2.2
+numpy>=1.26
+anthropic>=1.15
+pytest>=8   # only needed to run the tests
