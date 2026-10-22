@@ -4,6 +4,182 @@
  "created": "2026-10-21T23:13:55.268074+00:00",
  "base_currency": "GBP",
  "capital_per_market": 10000,
- "accounts": {},
- "ai_usage": {}
+ "accounts": {
+  "Trend Rules": {
+   "IN": {
+    "contestant": "Trend Rules",
+    "market": "IN",
+    "currency": "INR",
+    "start_capital": 1271915.78,
+    "cash": 1271915.78,
+    "positions": {},
+    "banked": 0.0,
+    "times_banked": 0,
+    "fees": 0.0,
+    "slippage": 0.0,
+    "realized_pnl": 0.0,
+    "trades": 0,
+    "wins": 0,
+    "losses": 0,
+    "peak_total": 1271915.78,
+    "day": "2026-10-22",
+    "day_start_total": 1271915.78,
+    "trades_today": 0,
+    "paused_today": false,
+    "stopped": false,
+    "status_note": "",
+    "last_prices": {
+     "RELIANCE.NS": 1188.4000244140625,
+     "TCS.NS": 2499.800048828125,
+     "INFY.NS": 1147.1500244140625,
+     "HDFCBANK.NS": 693.6500244140625,
+     "ICICIBANK.NS": 1393.4000244140625
+    },
+    "meta": {}
+   },
+   "UK": {
+    "contestant": "Trend Rules",
+    "market": "UK",
+    "currency": "GBP",
+    "start_capital": 10000.0,
+    "cash": 10000.0,
+    "positions": {},
+    "banked": 0.0,
+    "times_banked": 0,
+    "fees": 0.0,
+    "slippage": 0.0,
+    "realized_pnl": 0.0,
+    "trades": 0,
+    "wins": 0,
+    "losses": 0,
+    "peak_total": 10000.0,
+    "day": "2026-10-22",
+    "day_start_total": 10000.0,
+    "trades_today": 0,
+    "paused_today": false,
+    "stopped": false,
+    "status_note": "",
+    "last_prices": {
+     "AZN.L": 125.6,
+     "SHEL.L": 39.37,
+     "HSBA.L": 13.71199951171875,
+     "ULVR.L": 48.455,
+     "BP.L": 6.24
+    },
+    "meta": {}
+   }
+  },
+  "Buy & Hold": {
+   "IN": {
+    "contestant": "Buy & Hold",
+    "market": "IN",
+    "currency": "INR",
+    "start_capital": 1271915.78,
+    "cash": 15786.417528688879,
+    "positions": {
+     "RELIANCE.NS": {
+      "qty": 211,
+      "avg_cost": 1190.5399169180237
+     },
+     "TCS.NS": {
+      "qty": 100,
+      "avg_cost": 2504.301313786047
+     },
+     "INFY.NS": {
+      "qty": 219,
+      "avg_cost": 1149.2156401055236
+     },
+     "HDFCBANK.NS": {
+      "qty": 362,
+      "avg_cost": 694.8990453305236
+     },
+     "ICICIBANK.NS": {
+      "qty": 180,
+      "avg_cost": 1395.9090501680237
+     }
+    },
+    "banked": 0.0,
+    "times_banked": 0,
+    "fees": 1630.8480687233641,
+    "slippage": 626.9357893066406,
+    "realized_pnl": 0.0,
+    "trades": 5,
+    "wins": 0,
+    "losses": 0,
+    "peak_total": 1271915.78,
+    "day": "2026-10-22",
+    "day_start_total": 1271915.78,
+    "trades_today": 5,
+    "paused_today": false,
+    "stopped": false,
+    "status_note": "",
+    "last_prices": {
+     "RELIANCE.NS": 1188.4000244140625,
+     "TCS.NS": 2499.800048828125,
+     "INFY.NS": 1147.1500244140625,
+     "HDFCBANK.NS": 693.6500244140625,
+     "ICICIBANK.NS": 1393.4000244140625
+    },
+    "meta": {
+     "bought": true
+    }
+   },
+   "UK": {
+    "contestant": "Buy & Hold",
+    "market": "UK",
+    "currency": "GBP",
+    "start_capital": 10000.0,
+    "cash": 229.41563941842696,
+    "positions": {
+     "AZN.L": {
+      "qty": 15,
+      "avg_cost": 126.29111399999998
+     },
+     "SHEL.L": {
+      "qty": 50,
+      "avg_cost": 39.586633424999995
+     },
+     "HSBA.L": {
+      "qty": 143,
+      "avg_cost": 13.787449789031982
+     },
+     "ULVR.L": {
+      "qty": 40,
+      "avg_cost": 48.72162363749999
+     },
+     "BP.L": {
+      "qty": 315,
+      "avg_cost": 6.274335600000001
+     }
+    },
+    "banked": 0.0,
+    "times_banked": 0,
+    "fees": 48.60987244070434,
+    "slippage": 4.858557965087891,
+    "realized_pnl": 0.0,
+    "trades": 5,
+    "wins": 0,
+    "losses": 0,
+    "peak_total": 10000.0,
+    "day": "2026-10-22",
+    "day_start_total": 10000.0,
+    "trades_today": 5,
+    "paused_today": false,
+    "stopped": false,
+    "status_note": "",
+    "last_prices": {
+     "AZN.L": 125.6,
+     "SHEL.L": 39.37,
+     "HSBA.L": 13.71199951171875,
+     "ULVR.L": 48.455,
+     "BP.L": 6.24
+    },
+    "meta": {
+     "bought": true
+    }
+   }
+  }
+ },
+ "ai_usage": {},
+ "last_tick": "2026-10-22T08:31:14.773926+00:00"
 }

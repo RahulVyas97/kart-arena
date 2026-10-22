@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Kart Arena</title>
+
+<style>
+:root { color-scheme: light; --page:#f9f9f7; --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+  --grid:#e1e0d9; --axis:#c3c2b7; --ring:rgba(11,11,11,0.10); --series-1:#2a78d6;--series-2:#eb6834;--series-3:#1baf7a;--series-4:#eda100;--series-5:#e87ba4;--series-6:#008300;--series-7:#6250d6;--series-8:#e34948; }
+@media (prefers-color-scheme: dark) { :root:where(:not([data-theme="light"])) { color-scheme: dark; --page:#0d0d0d;
+  --surface:#1a1a19; --ink:#f0efec; --ink2:#c3c2b7; --muted:#898781; --grid:#2c2c2a; --axis:#383835;
+  --ring:rgba(255,255,255,0.10); --series-1:#3987e5;--series-2:#d95926;--series-3:#199e70;--series-4:#c98500;--series-5:#d55181;--series-6:#008300;--series-7:#9085e9;--series-8:#e66767; } }
+:root[data-theme="dark"] { color-scheme: dark; --page:#0d0d0d; --surface:#1a1a19; --ink:#f0efec; --ink2:#c3c2b7;
+  --muted:#898781; --grid:#2c2c2a; --axis:#383835; --ring:rgba(255,255,255,0.10); --series-1:#3987e5;--series-2:#d95926;--series-3:#199e70;--series-4:#c98500;--series-5:#d55181;--series-6:#008300;--series-7:#9085e9;--series-8:#e66767; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--page); color:var(--ink); font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif; }
+main { max-width: 980px; margin: 0 auto; padding: max(24px, env(safe-area-inset-top)) 16px 48px; }
+h1 { font-size: 22px; margin: 0 0 4px; } h2 { font-size: 16px; margin: 0 0 12px; }
+.sub, .muted { color: var(--ink2); } .muted { font-size: 13px; }
+.card { background: var(--surface); border: 1px solid var(--ring); border-radius: 12px; padding: 16px; margin-top: 16px; }
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 13px; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--grid); white-space: nowrap; }
+th { color: var(--ink2); font-weight: 600; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.strong { font-weight: 650; }
+.legend { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 8px; font-size: 13px; color: var(--ink2); }
+.key { display: inline-flex; align-items: center; gap: 6px; }
+.swatch { width: 14px; height: 2px; border-radius: 2px; display: inline-block; }
+.chartwrap { position: relative; }
+.chartwrap.narrow { display: none; }
+@media (max-width: 640px) { .chartwrap.wide { display: none; } .chartwrap.narrow { display: block; } }
+.chart { width: 100%; height: auto; display: block; }
+.chart .grid { stroke: var(--grid); stroke-width: 1; } .chart .baseline { stroke: var(--axis); stroke-width: 1; }
+.chart .axis { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+.chart .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.chart .dot { stroke: var(--surface); stroke-width: 2; }
+.chart .endlabel { fill: var(--ink2); font-size: 12px; } .chart .endval { fill: var(--ink); font-weight: 600; }
+.chart .xhair { stroke: var(--axis); stroke-width: 1; }
+.chart #hit:focus { outline: none; } .chart #hit:focus-visible { outline: 2px solid var(--axis); }
+.tip { position: absolute; top: 8px; pointer-events: none; background: var(--surface); border: 1px solid var(--ring);
+  border-radius: 8px; padding: 8px 10px; font-size: 12px; box-shadow: 0 4px 14px rgba(0,0,0,.12); min-width: 150px; }
+.tip .row { display: flex; align-items: center; gap: 8px; justify-content: space-between; }
+.tip .val { font-weight: 650; color: var(--ink); font-variant-numeric: tabular-nums; }
+.tip .name { color: var(--ink2); display: inline-flex; align-items: center; gap: 6px; }
+ul.notes { list-style: none; padding: 0; margin: 0; } ul.notes li { padding: 8px 0; border-bottom: 1px solid var(--grid); }
+details summary { cursor: pointer; color: var(--ink2); font-size: 13px; margin-top: 10px; }
+</style></head>
+<body><main>
+<h1>Kart Arena · live</h1>
+<div class="sub">Paper money only. Returns are after fees, taxes and slippage.
+Updated <span id="updated" data-ts="2026-10-22T09:31:15.983593+01:00" title="Thu 22 Oct 2026 09:31">Thu 22 Oct 2026 09:31</span>.</div>
+<div class="muted">Open now: India (NSE), UK (LSE) · next: US (NYSE/Nasdaq) opens Thu 14:30 (as of this update)</div>
+<section class="card"><h2>Leaderboard</h2><div class="scroll"><table>
+<thead><tr><th>#</th><th>Contestant</th><th class="num">Return</th><th class="num">Value (GBP)</th>
+<th class="num">Trades</th><th class="num">Win rate</th><th class="num">Costs (GBP)</th><th class="num">Banked (GBP)</th>
+<th class="num">IN</th><th class="num">UK</th><th class="num">US</th><th class="num">AI spend</th></tr></thead>
+<tbody><tr><td>1</td><td>Trend Rules</td><td class='num strong'>+0.00%</td><td class='num'>20,000.00</td><td class='num'>0</td><td class='num'>-</td><td class='num'>0.00</td><td class='num'>0.00</td><td class='num'>+0.00%</td><td class='num'>+0.00%</td><td class='num'>-</td><td class='num'>-</td></tr><tr><td>2</td><td>Buy &amp; Hold</td><td class='num strong'>-0.36%</td><td class='num'>19,928.78</td><td class='num'>10</td><td class='num'>-</td><td class='num'>71.22</td><td class='num'>0.00</td><td class='num'>-0.18%</td><td class='num'>-0.53%</td><td class='num'>-</td><td class='num'>-</td></tr></tbody></table></div>
+</section>
+<section class="card"><h2>Return after costs over time</h2><p class="muted">The chart appears after a few ticks.</p>
+<details><summary>Show as a table (end of each day)</summary><div class="scroll"><table>
+<thead><tr><th>Date</th><th>Trend Rules</th><th>Buy &amp; Hold</th></tr></thead><tbody><tr><td>2026-10-22</td><td class='num'>+0.00%</td><td class='num'>-0.36%</td></tr></tbody></table></div></details></section>
+<section class="card"><h2>What the AI was thinking</h2><p class="muted">No AI notes yet.</p></section>
+<section class="card"><h2>Recent trades</h2><div class="scroll"><table>
+<thead><tr><th>Time</th><th>Contestant</th><th>Market</th><th>Side</th><th>Stock</th><th class="num">Qty</th>
+<th class="num">Price</th><th class="num">P&amp;L</th><th>Why</th></tr></thead>
+<tbody><tr><td>Thu 22 Oct 09:31</td><td>Buy &amp; Hold</td><td>UK</td><td>buy</td><td>BP.L</td><td class='num'>315</td><td class='num'>6.24</td><td class='num'>-</td><td>benchmark: equal-weight buy and hold</td></tr><tr><td>Thu 22 Oct 09:31</td><td>Buy &amp; Hold</td><td>UK</td><td>buy</td><td>ULVR.L</td><td class='num'>40</td><td class='num'>48.48</td><td class='num'>-</td><td>benchmark: equal-weight buy and hold</td></tr><tr><td>Thu 22 Oct 09:31</td><td>Buy &amp; Hold</td><td>UK</td><td>buy</td><td>HSBA.L</td><td class='num'>143</td><td class='num'>13.72</td><td class='num'>-</td><td>benchmark: equal-weight buy and hold</td></tr><tr><td>Thu 22 Oct 09:31</td><td>Buy &amp; Hold</td><td>UK</td><td>buy</td><td>SHEL.L</td><td class='num'>50</td><td class='num'>39.39</td><td class='num'>-</td><td>benchmark: equal-weight buy and hold</td></tr><tr><td>Thu 22 Oct 09:31</td><td>Buy &amp; Hold</td><td>UK</td><td>buy</td><td>AZN.L</td><td class='num'>15</td><td class='num'>125.66</td><td class='num'>-</td><td>benchmark: equal-weight buy and hold</td></tr><tr><td>Thu 22 Oct 09:31</td><td>Buy &amp; Hold</td><td>IN</td><td>buy</td><td>ICICIBANK.NS</td><td class='num'>180</td><td class='num'>1,394.10</td><td class='num'>-</td><td>benchmark: equal-weight buy and hold</td></tr><tr><td>Thu 22 Oct 09:31</td><td>Buy &amp; Hold</td><td>IN</td><td>buy</td><td>HDFCBANK.NS</td><td class='num'>362</td><td class='num'>694.00</td><td class='num'>-</td><td>benchmark: equal-weight buy and hold</td></tr><tr><td>Thu 22 Oct 09:31</td><td>Buy &amp; Hold</td><td>IN</td><td>buy</td><td>INFY.NS</td><td class='num'>219</td><td class='num'>1,147.72</td><td class='num'>-</td><td>benchmark: equal-weight buy and hold</td></tr><tr><td>Thu 22 Oct 09:31</td><td>Buy &amp; Hold</td><td>IN</td><td>buy</td><td>TCS.NS</td><td class='num'>100</td><td class='num'>2,501.05</td><td class='num'>-</td><td>benchmark: equal-weight buy and hold</td></tr><tr><td>Thu 22 Oct 09:31</td><td>Buy &amp; Hold</td><td>IN</td><td>buy</td><td>RELIANCE.NS</td><td class='num'>211</td><td class='num'>1,188.99</td><td class='num'>-</td><td>benchmark: equal-weight buy and hold</td></tr></tbody></table></div></section>
+<p class="muted">Simulated results. Real trading adds things paper can't model well: partial fills, gaps, outages,
+and your own nerves. Prices from Yahoo Finance may be delayed.</p>
+</main>
+<script>
+(() => {
+  const u = document.getElementById("updated");
+  if (!u) return;
+  const t = new Date(u.dataset.ts);
+  const tick = () => {
+    const m = Math.round((Date.now() - t) / 60000);
+    u.textContent = m < 1 ? "just now" : m < 60 ? m + " min ago" : m < 1440 ? Math.round(m / 60) + " h ago"
+      : Math.round(m / 1440) + " days ago";
+  };
+  tick(); setInterval(tick, 60000);
+})();
+document.querySelectorAll("script.chartdata").forEach(el => {
+  const data = JSON.parse(el.textContent), u = data.uid;
+  const svg = document.getElementById("chart-" + u), hit = document.getElementById("hit-" + u);
+  const xhair = document.getElementById("xhair-" + u), tip = document.getElementById("tip-" + u);
+  let idx = data.x.length - 1;
+  function nearest(px) {
+    let best = 0, dist = Infinity;
+    data.x.forEach((x, i) => { const d = Math.abs(x - px); if (d < dist) { dist = d; best = i; } });
+    return best;
+  }
+  function show(i) {
+    idx = Math.max(0, Math.min(data.x.length - 1, i));
+    const x = data.x[idx];
+    xhair.setAttribute("x1", x); xhair.setAttribute("x2", x); xhair.setAttribute("visibility", "visible");
+    tip.replaceChildren();
+    const head = document.createElement("div"); head.className = "muted"; head.textContent = data.labels[idx];
+    tip.appendChild(head);
+    data.series.forEach(s => {
+      const row = document.createElement("div"); row.className = "row";
+      const name = document.createElement("span"); name.className = "name";
+      const key = document.createElement("span"); key.className = "swatch";
+      key.style.background = "var(--series-" + s.slot + ")";
+      name.appendChild(key); name.appendChild(document.createTextNode(s.name));
+      const val = document.createElement("span"); val.className = "val";
+      const v = s.v[idx]; val.textContent = v === null ? "-" : (v >= 0 ? "+" : "") + v.toFixed(2) + "%";
+      row.appendChild(val); row.appendChild(name); tip.appendChild(row);
+    });
+    tip.hidden = false;
+    const box = svg.getBoundingClientRect(), scale = box.width / svg.viewBox.baseVal.width;
+    const left = x * scale, w = tip.offsetWidth;
+    tip.style.left = (left + 12 + w > box.width ? left - w - 12 : left + 12) + "px";
+  }
+  function hide() { xhair.setAttribute("visibility", "hidden"); tip.hidden = true; }
+  hit.addEventListener("pointermove", e => {
+    const box = svg.getBoundingClientRect();
+    show(nearest((e.clientX - box.left) * svg.viewBox.baseVal.width / box.width));
+  });
+  hit.addEventListener("pointerleave", hide);
+  hit.addEventListener("focus", () => show(idx));
+  hit.addEventListener("blur", hide);
+  hit.addEventListener("keydown", e => {
+    if (e.key === "ArrowLeft") { show(idx - 1); e.preventDefault(); }
+    if (e.key === "ArrowRight") { show(idx + 1); e.preventDefault(); }
+  });
+});
+</script>
+</body></html>
