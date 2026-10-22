@@ -60,11 +60,42 @@
     "stopped": false,
     "status_note": "",
     "last_prices": {
-     "AZN.L": 125.6,
-     "SHEL.L": 39.37,
-     "HSBA.L": 13.71199951171875,
-     "ULVR.L": 48.455,
-     "BP.L": 6.24
+     "AZN.L": 127.76,
+     "SHEL.L": 39.355,
+     "HSBA.L": 13.825999755859375,
+     "ULVR.L": 48.91,
+     "BP.L": 6.204000244140625
+    },
+    "meta": {}
+   },
+   "US": {
+    "contestant": "Trend Rules",
+    "market": "US",
+    "currency": "USD",
+    "start_capital": 13371.49,
+    "cash": 13371.49,
+    "positions": {},
+    "banked": 0.0,
+    "times_banked": 0,
+    "fees": 0.0,
+    "slippage": 0.0,
+    "realized_pnl": 0.0,
+    "trades": 0,
+    "wins": 0,
+    "losses": 0,
+    "peak_total": 13371.49,
+    "day": "2026-10-22",
+    "day_start_total": 13371.49,
+    "trades_today": 0,
+    "paused_today": false,
+    "stopped": false,
+    "status_note": "",
+    "last_prices": {
+     "AAPL": 345.30499267578125,
+     "MSFT": 526.3699951171875,
+     "NVDA": 216.8800048828125,
+     "AMZN": 253.89999389648438,
+     "GOOGL": 328.30999755859375
     },
     "meta": {}
    }
@@ -160,7 +191,7 @@
     "trades": 5,
     "wins": 0,
     "losses": 0,
-    "peak_total": 10000.0,
+    "peak_total": 10001.343681410613,
     "day": "2026-10-22",
     "day_start_total": 10000.0,
     "trades_today": 5,
@@ -168,11 +199,65 @@
     "stopped": false,
     "status_note": "",
     "last_prices": {
-     "AZN.L": 125.6,
-     "SHEL.L": 39.37,
-     "HSBA.L": 13.71199951171875,
-     "ULVR.L": 48.455,
-     "BP.L": 6.24
+     "AZN.L": 127.76,
+     "SHEL.L": 39.355,
+     "HSBA.L": 13.825999755859375,
+     "ULVR.L": 48.91,
+     "BP.L": 6.204000244140625
+    },
+    "meta": {
+     "bought": true
+    }
+   },
+   "US": {
+    "contestant": "Buy & Hold",
+    "market": "US",
+    "currency": "USD",
+    "start_capital": 13371.49,
+    "cash": 550.6199901855466,
+    "positions": {
+     "AAPL": {
+      "qty": 7,
+      "avg_cost": 345.40858417358396
+     },
+     "MSFT": {
+      "qty": 5,
+      "avg_cost": 526.5279061157227
+     },
+     "NVDA": {
+      "qty": 12,
+      "avg_cost": 216.94506888427733
+     },
+     "AMZN": {
+      "qty": 10,
+      "avg_cost": 253.97616389465333
+     },
+     "GOOGL": {
+      "qty": 8,
+      "avg_cost": 328.40849055786134
+     }
+    },
+    "banked": 0.0,
+    "times_banked": 0,
+    "fees": 0.0,
+    "slippage": 3.8451074707031245,
+    "realized_pnl": 0.0,
+    "trades": 5,
+    "wins": 0,
+    "losses": 0,
+    "peak_total": 13371.49,
+    "day": "2026-10-22",
+    "day_start_total": 13371.49,
+    "trades_today": 5,
+    "paused_today": false,
+    "stopped": false,
+    "status_note": "",
+    "last_prices": {
+     "AAPL": 345.30499267578125,
+     "MSFT": 526.3699951171875,
+     "NVDA": 216.8800048828125,
+     "AMZN": 253.89999389648438,
+     "GOOGL": 328.30999755859375
     },
     "meta": {
      "bought": true
@@ -181,5 +266,5 @@
   }
  },
  "ai_usage": {},
- "last_tick": "2026-10-22T08:31:14.773926+00:00"
+ "last_tick": "2026-10-22T14:04:21.412473+00:00"
 }
