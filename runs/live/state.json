@@ -60,11 +60,11 @@
     "stopped": false,
     "status_note": "",
     "last_prices": {
-     "AZN.L": 127.6,
-     "SHEL.L": 39.315,
-     "HSBA.L": 13.58800048828125,
-     "ULVR.L": 49.65,
-     "BP.L": 6.22
+     "AZN.L": 128.16,
+     "SHEL.L": 39.9,
+     "HSBA.L": 13.41800048828125,
+     "ULVR.L": 49.995,
+     "BP.L": 6.292999877929687
     },
     "meta": {}
    },
@@ -84,18 +84,18 @@
     "wins": 0,
     "losses": 0,
     "peak_total": 13371.49,
-    "day": "2026-10-22",
+    "day": "2026-10-23",
     "day_start_total": 13371.49,
     "trades_today": 0,
     "paused_today": false,
     "stopped": false,
     "status_note": "",
     "last_prices": {
-     "AAPL": 346.2099914550781,
-     "MSFT": 522.9400024414062,
-     "NVDA": 212.43499755859375,
-     "AMZN": 249.89999389648438,
-     "GOOGL": 323.57501220703125
+     "AAPL": 349.5799865722656,
+     "MSFT": 517.8939819335938,
+     "NVDA": 212.19000244140625,
+     "AMZN": 247.99180603027344,
+     "GOOGL": 322.7550048828125
     },
     "meta": {}
    }
@@ -191,7 +191,7 @@
     "trades": 5,
     "wins": 0,
     "losses": 0,
-    "peak_total": 10001.343681410613,
+    "peak_total": 10047.684670790497,
     "day": "2026-10-23",
     "day_start_total": 9997.549709242645,
     "trades_today": 0,
@@ -199,11 +199,11 @@
     "stopped": false,
     "status_note": "",
     "last_prices": {
-     "AZN.L": 127.6,
-     "SHEL.L": 39.315,
-     "HSBA.L": 13.58800048828125,
-     "ULVR.L": 49.65,
-     "BP.L": 6.22
+     "AZN.L": 128.16,
+     "SHEL.L": 39.9,
+     "HSBA.L": 13.41800048828125,
+     "ULVR.L": 49.995,
+     "BP.L": 6.292999877929687
     },
     "meta": {
      "bought": true
@@ -246,18 +246,18 @@
     "wins": 0,
     "losses": 0,
     "peak_total": 13371.49,
-    "day": "2026-10-22",
-    "day_start_total": 13371.49,
-    "trades_today": 5,
+    "day": "2026-10-23",
+    "day_start_total": 13195.387934521485,
+    "trades_today": 0,
     "paused_today": false,
     "stopped": false,
     "status_note": "",
     "last_prices": {
-     "AAPL": 346.2099914550781,
-     "MSFT": 522.9400024414062,
-     "NVDA": 212.43499755859375,
-     "AMZN": 249.89999389648438,
-     "GOOGL": 323.57501220703125
+     "AAPL": 349.5799865722656,
+     "MSFT": 517.8939819335938,
+     "NVDA": 212.19000244140625,
+     "AMZN": 247.99180603027344,
+     "GOOGL": 322.7550048828125
     },
     "meta": {
      "bought": true
@@ -266,5 +266,5 @@
   }
  },
  "ai_usage": {},
- "last_tick": "2026-10-23T08:27:41.399187+00:00"
+ "last_tick": "2026-10-23T13:47:09.554981+00:00"
 }
