@@ -42,29 +42,34 @@
     "market": "UK",
     "currency": "GBP",
     "start_capital": 10000.0,
-    "cash": 10000.0,
-    "positions": {},
+    "cash": 8576.95253185,
+    "positions": {
+     "AZN.L": {
+      "qty": 11,
+      "avg_cost": 129.36795164999998
+     }
+    },
     "banked": 0.0,
     "times_banked": 0,
-    "fees": 0.0,
-    "slippage": 0.0,
+    "fees": 7.07983815,
+    "slippage": 0.70763,
     "realized_pnl": 0.0,
-    "trades": 0,
+    "trades": 1,
     "wins": 0,
     "losses": 0,
     "peak_total": 10000.0,
     "day": "2026-10-27",
     "day_start_total": 10000.0,
-    "trades_today": 0,
+    "trades_today": 1,
     "paused_today": false,
     "stopped": false,
     "status_note": "",
     "last_prices": {
-     "AZN.L": 128.68,
-     "SHEL.L": 39.83404052734375,
-     "HSBA.L": 12.71366943359375,
-     "ULVR.L": 48.775,
-     "BP.L": 6.284000244140625
+     "AZN.L": 128.66,
+     "SHEL.L": 39.385,
+     "HSBA.L": 12.81199951171875,
+     "ULVR.L": 48.88,
+     "BP.L": 6.150999755859375
     },
     "meta": {}
    },
@@ -84,18 +89,18 @@
     "wins": 0,
     "losses": 0,
     "peak_total": 13371.49,
-    "day": "2026-10-26",
+    "day": "2026-10-27",
     "day_start_total": 13371.49,
     "trades_today": 0,
     "paused_today": false,
     "stopped": false,
     "status_note": "",
     "last_prices": {
-     "AAPL": 345.4599914550781,
-     "MSFT": 528.9550170898438,
-     "NVDA": 216.7100067138672,
-     "AMZN": 249.60000610351562,
-     "GOOGL": 320.2099914550781
+     "AAPL": 347.4200134277344,
+     "MSFT": 533.0850219726562,
+     "NVDA": 217.6750030517578,
+     "AMZN": 251.5500030517578,
+     "GOOGL": 320.2550048828125
     },
     "meta": {}
    }
@@ -199,11 +204,11 @@
     "stopped": false,
     "status_note": "",
     "last_prices": {
-     "AZN.L": 128.68,
-     "SHEL.L": 39.83404052734375,
-     "HSBA.L": 12.71366943359375,
-     "ULVR.L": 48.775,
-     "BP.L": 6.284000244140625
+     "AZN.L": 128.66,
+     "SHEL.L": 39.385,
+     "HSBA.L": 12.81199951171875,
+     "ULVR.L": 48.88,
+     "BP.L": 6.150999755859375
     },
     "meta": {
      "bought": true
@@ -246,18 +251,18 @@
     "wins": 0,
     "losses": 0,
     "peak_total": 13371.49,
-    "day": "2026-10-26",
-    "day_start_total": 13271.8150890625,
+    "day": "2026-10-27",
+    "day_start_total": 13337.62530024414,
     "trades_today": 0,
     "paused_today": false,
     "stopped": false,
     "status_note": "",
     "last_prices": {
-     "AAPL": 345.4599914550781,
-     "MSFT": 528.9550170898438,
-     "NVDA": 216.7100067138672,
-     "AMZN": 249.60000610351562,
-     "GOOGL": 320.2099914550781
+     "AAPL": 347.4200134277344,
+     "MSFT": 533.0850219726562,
+     "NVDA": 217.6750030517578,
+     "AMZN": 251.5500030517578,
+     "GOOGL": 320.2550048828125
     },
     "meta": {
      "bought": true
@@ -266,5 +271,5 @@
   }
  },
  "ai_usage": {},
- "last_tick": "2026-10-27T08:53:37.017558+00:00"
+ "last_tick": "2026-10-27T15:18:38.211287+00:00"
 }
