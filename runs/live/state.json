@@ -22,18 +22,18 @@
     "wins": 0,
     "losses": 0,
     "peak_total": 1271915.78,
-    "day": "2026-10-29",
+    "day": "2026-10-30",
     "day_start_total": 1271915.78,
     "trades_today": 0,
     "paused_today": false,
     "stopped": false,
     "status_note": "",
     "last_prices": {
-     "RELIANCE.NS": 1165.0,
-     "TCS.NS": 2482.89990234375,
-     "INFY.NS": 1142.699951171875,
-     "HDFCBANK.NS": 685.0,
-     "ICICIBANK.NS": 1386.0
+     "RELIANCE.NS": 1159.0,
+     "TCS.NS": 2509.89990234375,
+     "INFY.NS": 1175.0,
+     "HDFCBANK.NS": 691.0999755859375,
+     "ICICIBANK.NS": 1395.699951171875
     },
     "meta": {}
    },
@@ -53,18 +53,18 @@
     "wins": 0,
     "losses": 1,
     "peak_total": 10000.0,
-    "day": "2026-10-29",
+    "day": "2026-10-30",
     "day_start_total": 9983.368971849999,
     "trades_today": 0,
     "paused_today": false,
     "stopped": false,
     "status_note": "",
     "last_prices": {
-     "AZN.L": 130.295,
-     "SHEL.L": 40.19,
-     "HSBA.L": 12.97300048828125,
-     "ULVR.L": 47.815,
-     "BP.L": 6.235499877929687
+     "AZN.L": 135.2,
+     "SHEL.L": 40.44,
+     "HSBA.L": 12.82800048828125,
+     "ULVR.L": 48.615,
+     "BP.L": 6.267000122070312
     },
     "meta": {}
    },
@@ -138,18 +138,18 @@
     "wins": 0,
     "losses": 0,
     "peak_total": 1275072.473436892,
-    "day": "2026-10-29",
-    "day_start_total": 1257592.6970697045,
+    "day": "2026-10-30",
+    "day_start_total": 1270054.5901361108,
     "trades_today": 0,
     "paused_today": false,
     "stopped": false,
     "status_note": "",
     "last_prices": {
-     "RELIANCE.NS": 1165.0,
-     "TCS.NS": 2482.89990234375,
-     "INFY.NS": 1142.699951171875,
-     "HDFCBANK.NS": 685.0,
-     "ICICIBANK.NS": 1386.0
+     "RELIANCE.NS": 1159.0,
+     "TCS.NS": 2509.89990234375,
+     "INFY.NS": 1175.0,
+     "HDFCBANK.NS": 691.0999755859375,
+     "ICICIBANK.NS": 1395.699951171875
     },
     "meta": {
      "bought": true
@@ -192,18 +192,18 @@
     "wins": 0,
     "losses": 0,
     "peak_total": 10088.307674330537,
-    "day": "2026-10-29",
-    "day_start_total": 9961.706171644988,
+    "day": "2026-10-30",
+    "day_start_total": 10032.524747694793,
     "trades_today": 0,
     "paused_today": false,
     "stopped": false,
     "status_note": "",
     "last_prices": {
-     "AZN.L": 130.295,
-     "SHEL.L": 40.19,
-     "HSBA.L": 12.97300048828125,
-     "ULVR.L": 47.815,
-     "BP.L": 6.235499877929687
+     "AZN.L": 135.2,
+     "SHEL.L": 40.44,
+     "HSBA.L": 12.82800048828125,
+     "ULVR.L": 48.615,
+     "BP.L": 6.267000122070312
     },
     "meta": {
      "bought": true
@@ -266,5 +266,5 @@
   }
  },
  "ai_usage": {},
- "last_tick": "2026-10-29T16:27:52.502563+00:00"
+ "last_tick": "2026-10-30T09:55:04.557499+00:00"
 }
