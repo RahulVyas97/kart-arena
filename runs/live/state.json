@@ -84,18 +84,18 @@
     "wins": 0,
     "losses": 0,
     "peak_total": 13371.49,
-    "day": "2026-11-04",
+    "day": "2026-11-05",
     "day_start_total": 13371.49,
     "trades_today": 0,
     "paused_today": false,
     "stopped": false,
     "status_note": "",
     "last_prices": {
-     "AAPL": 354.125,
-     "MSFT": 555.22998046875,
-     "NVDA": 203.875,
-     "AMZN": 269.92999267578125,
-     "GOOGL": 292.0268859863281
+     "AAPL": 343.5,
+     "MSFT": 537.0050048828125,
+     "NVDA": 182.42999267578125,
+     "AMZN": 259.2799072265625,
+     "GOOGL": 283.2650146484375
     },
     "meta": {}
    }
@@ -246,18 +246,18 @@
     "wins": 0,
     "losses": 0,
     "peak_total": 13371.49,
-    "day": "2026-11-04",
-    "day_start_total": 13287.659907177735,
+    "day": "2026-11-05",
+    "day_start_total": 12688.22411616211,
     "trades_today": 0,
     "paused_today": false,
     "stopped": false,
     "status_note": "",
     "last_prices": {
-     "AAPL": 354.125,
-     "MSFT": 555.22998046875,
-     "NVDA": 203.875,
-     "AMZN": 269.92999267578125,
-     "GOOGL": 292.0268859863281
+     "AAPL": 343.5,
+     "MSFT": 537.0050048828125,
+     "NVDA": 182.42999267578125,
+     "AMZN": 259.2799072265625,
+     "GOOGL": 283.2650146484375
     },
     "meta": {
      "bought": true
@@ -266,5 +266,5 @@
   }
  },
  "ai_usage": {},
- "last_tick": "2026-11-05T10:44:43.416573+00:00"
+ "last_tick": "2026-11-05T18:21:12.245044+00:00"
 }
