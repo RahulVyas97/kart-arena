@@ -78,29 +78,34 @@
     "market": "US",
     "currency": "USD",
     "start_capital": 13371.49,
-    "cash": 13371.49,
-    "positions": {},
+    "cash": 11619.314572158813,
+    "positions": {
+     "AAPL": {
+      "qty": 5,
+      "avg_cost": 350.4350855682373
+     }
+    },
     "banked": 0.0,
     "times_banked": 0,
     "fees": 0.0,
-    "slippage": 0.0,
+    "slippage": 0.5254949798583984,
     "realized_pnl": 0.0,
-    "trades": 0,
+    "trades": 1,
     "wins": 0,
     "losses": 0,
     "peak_total": 13371.49,
-    "day": "2026-11-18",
+    "day": "2026-11-19",
     "day_start_total": 13371.49,
-    "trades_today": 0,
+    "trades_today": 1,
     "paused_today": false,
     "stopped": false,
     "status_note": "",
     "last_prices": {
-     "AAPL": 352.16009521484375,
-     "MSFT": 507.2099914550781,
-     "NVDA": 151.32000732421875,
-     "AMZN": 267.247314453125,
-     "GOOGL": 283.8450012207031
+     "AAPL": 350.3299865722656,
+     "MSFT": 503.1449890136719,
+     "NVDA": 148.49049377441406,
+     "AMZN": 259.4599914550781,
+     "GOOGL": 279.2950134277344
     },
     "meta": {}
    }
@@ -251,18 +256,18 @@
     "wins": 0,
     "losses": 0,
     "peak_total": 13371.49,
-    "day": "2026-11-18",
-    "day_start_total": 12310.863856152344,
+    "day": "2026-11-19",
+    "day_start_total": 12129.50078852539,
     "trades_today": 0,
     "paused_today": false,
     "stopped": false,
     "status_note": "",
     "last_prices": {
-     "AAPL": 352.16009521484375,
-     "MSFT": 507.2099914550781,
-     "NVDA": 151.32000732421875,
-     "AMZN": 267.247314453125,
-     "GOOGL": 283.8450012207031
+     "AAPL": 350.3299865722656,
+     "MSFT": 503.1449890136719,
+     "NVDA": 148.49049377441406,
+     "AMZN": 259.4599914550781,
+     "GOOGL": 279.2950134277344
     },
     "meta": {
      "bought": true
@@ -271,5 +276,5 @@
   }
  },
  "ai_usage": {},
- "last_tick": "2026-11-19T11:29:22.799726+00:00"
+ "last_tick": "2026-11-19T19:37:03.966933+00:00"
 }
