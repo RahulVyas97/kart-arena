@@ -42,34 +42,29 @@
     "market": "UK",
     "currency": "GBP",
     "start_capital": 10000.0,
-    "cash": 8443.843458241457,
-    "positions": {
-     "HSBA.L": {
-      "qty": 113,
-      "avg_cost": 13.069521985968017
-     }
-    },
+    "cash": 9857.896078241458,
+    "positions": {},
     "banked": 0.0,
     "times_banked": 0,
     "fees": 29.232008840451044,
-    "slippage": 5.082559041137696,
-    "realized_pnl": -79.30055734415555,
-    "trades": 7,
+    "slippage": 5.789939041137695,
+    "realized_pnl": -142.10392175854145,
+    "trades": 8,
     "wins": 0,
-    "losses": 3,
+    "losses": 4,
     "peak_total": 10000.0,
-    "day": "2026-11-19",
-    "day_start_total": 9920.699442655843,
+    "day": "2026-11-20",
+    "day_start_total": 9858.603458241458,
     "trades_today": 1,
     "paused_today": false,
     "stopped": false,
     "status_note": "",
     "last_prices": {
      "AZN.L": 134.86,
-     "SHEL.L": 35.78929931640625,
-     "HSBA.L": 12.99800048828125,
-     "ULVR.L": 47.93,
-     "BP.L": 5.493001708984375
+     "SHEL.L": 35.275,
+     "HSBA.L": 12.52,
+     "ULVR.L": 48.64,
+     "BP.L": 5.44
     },
     "meta": {}
    },
@@ -202,18 +197,18 @@
     "wins": 0,
     "losses": 0,
     "peak_total": 10088.307674330537,
-    "day": "2026-11-19",
-    "day_start_total": 9547.990213393035,
+    "day": "2026-11-20",
+    "day_start_total": 9465.625639418427,
     "trades_today": 0,
     "paused_today": false,
     "stopped": false,
     "status_note": "",
     "last_prices": {
      "AZN.L": 134.86,
-     "SHEL.L": 35.78929931640625,
-     "HSBA.L": 12.99800048828125,
-     "ULVR.L": 47.93,
-     "BP.L": 5.493001708984375
+     "SHEL.L": 35.275,
+     "HSBA.L": 12.52,
+     "ULVR.L": 48.64,
+     "BP.L": 5.44
     },
     "meta": {
      "bought": true
@@ -276,5 +271,5 @@
   }
  },
  "ai_usage": {},
- "last_tick": "2026-11-19T19:37:03.966933+00:00"
+ "last_tick": "2026-11-20T11:24:20.572648+00:00"
 }
