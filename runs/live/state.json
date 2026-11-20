@@ -73,34 +73,29 @@
     "market": "US",
     "currency": "USD",
     "start_capital": 13371.49,
-    "cash": 11619.314572158813,
-    "positions": {
-     "AAPL": {
-      "qty": 5,
-      "avg_cost": 350.4350855682373
-     }
-    },
+    "cash": 13339.548316650391,
+    "positions": {},
     "banked": 0.0,
     "times_banked": 0,
     "fees": 0.0,
-    "slippage": 0.5254949798583984,
-    "realized_pnl": 0.0,
-    "trades": 1,
+    "slippage": 1.041719970703125,
+    "realized_pnl": -31.94168334960932,
+    "trades": 2,
     "wins": 0,
-    "losses": 0,
+    "losses": 1,
     "peak_total": 13371.49,
-    "day": "2026-11-19",
-    "day_start_total": 13371.49,
+    "day": "2026-11-20",
+    "day_start_total": 13340.064541641235,
     "trades_today": 1,
     "paused_today": false,
     "stopped": false,
     "status_note": "",
     "last_prices": {
-     "AAPL": 350.3299865722656,
-     "MSFT": 503.1449890136719,
-     "NVDA": 148.49049377441406,
-     "AMZN": 259.4599914550781,
-     "GOOGL": 279.2950134277344
+     "AAPL": 344.1499938964844,
+     "MSFT": 488.67999267578125,
+     "NVDA": 132.98989868164062,
+     "AMZN": 248.6300048828125,
+     "GOOGL": 271.20001220703125
     },
     "meta": {}
    }
@@ -251,18 +246,18 @@
     "wins": 0,
     "losses": 0,
     "peak_total": 13371.49,
-    "day": "2026-11-19",
-    "day_start_total": 12129.50078852539,
+    "day": "2026-11-20",
+    "day_start_total": 11654.848841503906,
     "trades_today": 0,
     "paused_today": false,
     "stopped": false,
     "status_note": "",
     "last_prices": {
-     "AAPL": 350.3299865722656,
-     "MSFT": 503.1449890136719,
-     "NVDA": 148.49049377441406,
-     "AMZN": 259.4599914550781,
-     "GOOGL": 279.2950134277344
+     "AAPL": 344.1499938964844,
+     "MSFT": 488.67999267578125,
+     "NVDA": 132.98989868164062,
+     "AMZN": 248.6300048828125,
+     "GOOGL": 271.20001220703125
     },
     "meta": {
      "bought": true
@@ -271,5 +266,5 @@
   }
  },
  "ai_usage": {},
- "last_tick": "2026-11-20T11:24:20.572648+00:00"
+ "last_tick": "2026-11-20T19:14:58.367434+00:00"
 }
