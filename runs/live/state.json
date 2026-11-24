@@ -53,18 +53,18 @@
     "wins": 0,
     "losses": 4,
     "peak_total": 10000.0,
-    "day": "2026-11-23",
+    "day": "2026-11-24",
     "day_start_total": 9857.896078241458,
     "trades_today": 0,
     "paused_today": false,
     "stopped": false,
     "status_note": "",
     "last_prices": {
-     "AZN.L": 134.26,
-     "SHEL.L": 35.76,
-     "HSBA.L": 12.52,
+     "AZN.L": 136.58,
+     "SHEL.L": 35.52,
+     "HSBA.L": 12.54199951171875,
      "ULVR.L": 48.475,
-     "BP.L": 5.492520751953125
+     "BP.L": 5.449000244140625
     },
     "meta": {}
    },
@@ -192,18 +192,18 @@
     "wins": 0,
     "losses": 0,
     "peak_total": 10088.307674330537,
-    "day": "2026-11-23",
-    "day_start_total": 9490.81967628366,
+    "day": "2026-11-24",
+    "day_start_total": 9503.056646498506,
     "trades_today": 0,
     "paused_today": false,
     "stopped": false,
     "status_note": "",
     "last_prices": {
-     "AZN.L": 134.26,
-     "SHEL.L": 35.76,
-     "HSBA.L": 12.52,
+     "AZN.L": 136.58,
+     "SHEL.L": 35.52,
+     "HSBA.L": 12.54199951171875,
      "ULVR.L": 48.475,
-     "BP.L": 5.492520751953125
+     "BP.L": 5.449000244140625
     },
     "meta": {
      "bought": true
@@ -266,5 +266,5 @@
   }
  },
  "ai_usage": {},
- "last_tick": "2026-11-23T12:17:08.805385+00:00"
+ "last_tick": "2026-11-24T13:32:49.799525+00:00"
 }
