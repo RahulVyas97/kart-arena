@@ -22,18 +22,18 @@
     "wins": 0,
     "losses": 0,
     "peak_total": 1271915.78,
-    "day": "2026-10-30",
+    "day": "2026-11-27",
     "day_start_total": 1271915.78,
     "trades_today": 0,
     "paused_today": false,
     "stopped": false,
     "status_note": "",
     "last_prices": {
-     "RELIANCE.NS": 1159.0,
-     "TCS.NS": 2509.89990234375,
+     "RELIANCE.NS": 1388.800048828125,
+     "TCS.NS": 2570.300048828125,
      "INFY.NS": 1175.0,
-     "HDFCBANK.NS": 691.0999755859375,
-     "ICICIBANK.NS": 1395.699951171875
+     "HDFCBANK.NS": 862.1500244140625,
+     "ICICIBANK.NS": 1606.5
     },
     "meta": {}
    },
@@ -137,19 +137,19 @@
     "trades": 5,
     "wins": 0,
     "losses": 0,
-    "peak_total": 1275072.473436892,
-    "day": "2026-10-30",
-    "day_start_total": 1270054.5901361108,
+    "peak_total": 1424446.5415521264,
+    "day": "2026-11-27",
+    "day_start_total": 1424446.5415521264,
     "trades_today": 0,
     "paused_today": false,
     "stopped": false,
     "status_note": "",
     "last_prices": {
-     "RELIANCE.NS": 1159.0,
-     "TCS.NS": 2509.89990234375,
+     "RELIANCE.NS": 1388.800048828125,
+     "TCS.NS": 2570.300048828125,
      "INFY.NS": 1175.0,
-     "HDFCBANK.NS": 691.0999755859375,
-     "ICICIBANK.NS": 1395.699951171875
+     "HDFCBANK.NS": 862.1500244140625,
+     "ICICIBANK.NS": 1606.5
     },
     "meta": {
      "bought": true
@@ -266,5 +266,5 @@
   }
  },
  "ai_usage": {},
- "last_tick": "2026-11-26T12:16:49.311498+00:00"
+ "last_tick": "2026-11-27T03:50:17.986877+00:00"
 }
